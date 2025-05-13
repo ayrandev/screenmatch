@@ -1,3 +1,5 @@
+package principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroDeRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -8,18 +10,15 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Film thorFilme = new Film("O poderoso chefão");
+        Film thorFilme = new Film("O poderoso chefão", 2020);
         thorFilme.setDescricao("Um filme de comedia infantil");
-        thorFilme.setAnoDeLancamento(2020);
         thorFilme.setDuracaoEmMinutos(180);
         thorFilme.exibeFichaTecnica();
 
         //---------------------------------------//
 
-        Serie lostSerie = new Serie();
-        lostSerie.setNome("Lost");
+        Serie lostSerie = new Serie("Lost", 2000);
         lostSerie.setDescricao("Serie de suspense e terror");
-        lostSerie.setAnoDeLancamento(2000);
         lostSerie.exibeFichaTecnica();
         lostSerie.setTemporadas(15);
         lostSerie.setEpisodiosPorTemporada(10);
@@ -33,10 +32,9 @@ public class Principal {
 
         //------------------------------------------------//
 
-        Film lokiFilme = new Film("Loki");
+        Film lokiFilme = new Film("Loki", 2000);
         lokiFilme.setDescricao("Um filme da marvel");
         lokiFilme.exibeFichaTecnica();
-        lokiFilme.setAnoDeLancamento(2020);
         lokiFilme.setDuracaoEmMinutos(220);
 
 
@@ -49,10 +47,9 @@ public class Principal {
 
         //--------------------------------------------------//
 
-        var vingadores = new Film("Vingadores");
+        var vingadores = new Film("Vingadores", 2010);
         vingadores.setDuracaoEmMinutos(200);
         vingadores.setNome("Vingadores");
-        vingadores.setAnoDeLancamento(2010);
         vingadores.avalia(10);
 
         ArrayList<Film> listaDeFilmes = new ArrayList<>();
